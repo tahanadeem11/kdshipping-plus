@@ -1,0 +1,92 @@
+/**
+ * Hero Banner Three (Logistick) - scoped styles for the imported hero section.
+ * Only applies inside .hero-banner-three-wrapper so the rest of the site is unchanged.
+ */
+
+/* Variables used by banner-three (match logistick theme) */
+.hero-banner-three-wrapper {
+  --main-600: hsl(358, 86%, 47%);
+  --main-two-700: hsl(197, 89%, 6%);
+}
+
+/* Background image - size/position (background-image set inline or via JS) */
+.hero-banner-three-wrapper.bg-img {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  width: 100%;
+  min-height: 400px;
+}
+
+/* Banner three padding and responsive (reduced height) */
+.hero-banner-three-wrapper.banner-three {
+  padding: 220px 0;
+}
+
+@media (max-width: 991px) {
+  .hero-banner-three-wrapper.banner-three {
+    padding: 200px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner-three-wrapper.banner-three {
+    padding: 180px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-banner-three-wrapper.banner-three {
+    padding: 150px 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-banner-three-wrapper.banner-three {
+    padding: 140px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-banner-three-wrapper.banner-three {
+    padding: 110px 0;
+  }
+}
+
+/* Circle with accent (video circle) */
+.hero-banner-three-wrapper .before-bg-main-600 {
+  z-index: 1;
+}
+
+.hero-banner-three-wrapper .before-bg-main-600::before {
+  position: absolute;
+  content: "";
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background-color: var(--main-600);
+  top: 30px;
+  left: 0;
+  z-index: -1;
+}
+
+/* Curve road - visible only on very large screens */
+.hero-banner-three-wrapper .curve-road {
+  display: none;
+}
+
+@media (min-width: 1800px) {
+  .hero-banner-three-wrapper .curve-road {
+    display: block;
+  }
+}
+
+/* Utility: z-index for overlays */
+.hero-banner-three-wrapper .tw-z-2 {
+  z-index: 2;
+}
+
+/* Object fit for circle image */
+.hero-banner-three-wrapper .object-fit-cover {
+  object-fit: cover;
+}
