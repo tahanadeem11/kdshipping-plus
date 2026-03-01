@@ -7,8 +7,8 @@
 
     Note: This is Main JS File.
 -----------------------------------------------------------------------------------
-	CSS INDEX
-	===================
+    CSS INDEX
+    ===================
     01. Navbar
     02. Menu Sidebar
     03. Project Slider
@@ -51,22 +51,24 @@
          * 01. Navbar fix
          * ---------------------------*/
         $(document).on('click', '.navbar-area .navbar-nav li.menu-item-has-children>a', function (e) {
-            e.preventDefault();
+            if ($(this).attr('href') === '#') {
+                e.preventDefault();
+            }
         })
-       
+
         /*-  menu -*/
-        $('.navbar-area .menu').on('click', function() {
+        $('.navbar-area .menu').on('click', function () {
             $(this).toggleClass('open');
             $('.navbar-area .navbar-collapse').toggleClass('sopen');
         });
-    
+
         // mobile menu
         if ($(window).width() < 992) {
             $(".in-mobile").clone().appendTo(".sidebar-inner");
             $(".in-mobile ul li.menu-item-has-children").append('<i class="fas fa-chevron-right"></i>');
             $('<i class="fas fa-chevron-right"></i>').insertAfter("");
 
-            $(".menu-item-has-children a").on('click', function(e) {
+            $(".menu-item-has-children a").on('click', function (e) {
                 // e.preventDefault();
 
                 $(this).siblings('.sub-menu').animate({
@@ -77,8 +79,8 @@
 
         var menutoggle = $('.menu-toggle');
         var mainmenu = $('.navbar-nav');
-        
-        menutoggle.on('click', function() {
+
+        menutoggle.on('click', function () {
             if (menutoggle.hasClass('is-active')) {
                 mainmenu.removeClass('menu-open');
             } else {
@@ -90,24 +92,24 @@
         /*--------------------------------------------------
           02. Menu Sidebar (Hidden) Content Toggle
         ---------------------------------------------------*/
-        if($('.menu-sidebar').length){
+        if ($('.menu-sidebar').length) {
             //Show Form
-            $('.menu-sidebar button').on('click', function(e) {
+            $('.menu-sidebar button').on('click', function (e) {
                 e.preventDefault();
                 $('body').toggleClass('side-content-visible');
             });
             //Hide Form
-            $('.hidden-bar .inner-box .cross-icon,.form-back-drop,.close-menu').on('click', function(e) {
+            $('.hidden-bar .inner-box .cross-icon,.form-back-drop,.close-menu').on('click', function (e) {
                 e.preventDefault();
                 $('body').removeClass('side-content-visible');
             });
             //Dropdown Menu
-            $('.fullscreen-menu .navigation li.dropdown > a').on('click', function() {
+            $('.fullscreen-menu .navigation li.dropdown > a').on('click', function () {
                 $(this).next('ul').slideToggle(500);
             });
         }
-         
-        
+
+
         /*--------------------------------------------------
            03. Project Slider
         ---------------------------------------------------*/
@@ -125,12 +127,12 @@
                 nextArrow: '<button class="project-next"><i class="far fa-arrow-right"></i></button>',
             });
         }
-        
+
         $('button[data-bs-toggle="pill"]').on('shown.bs.tab', function (e) {
-          $('.project-active').slick('setPosition');
+            $('.project-active').slick('setPosition');
         })
-        
-        
+
+
         /*--------------------------------------------------
            04. Testimonial Slider
         ---------------------------------------------------*/
@@ -149,8 +151,8 @@
                 nextArrow: '<button class="testimonial-next"><i class="far fa-arrow-right"></i></button>',
             });
         }
-       
-        
+
+
         /*--------------------------------------------------
            05. Testimonial Two Slider
         ---------------------------------------------------*/
@@ -176,7 +178,7 @@
                 ]
             });
         }
-        
+
         if ($('.testimonial-right-slider').length) {
             $('.testimonial-right-slider').slick({
                 infinite: true,
@@ -200,8 +202,8 @@
                 ]
             });
         }
-        
-        
+
+
         /*--------------------------------------------------
            06. Testimonial Three Slider
         ---------------------------------------------------*/
@@ -232,8 +234,8 @@
                 ]
             });
         }
-        
-        
+
+
         /*--------------------------------------------------
             07. What We Provide
         ---------------------------------------------------*/
@@ -276,8 +278,8 @@
                     }
                 ]
             });
-        } 
-        
+        }
+
         /*--------------------------------------------------
             08. Product Two Slider
         ---------------------------------------------------*/
@@ -314,7 +316,7 @@
                     }
                 ]
             });
-        } 
+        }
 
         /*--------------------------------------------------
             09. Realated Product Slider
@@ -352,9 +354,9 @@
                     }
                 ]
             });
-        } 
+        }
 
-        
+
         /*--------------------------------------------------
             10. Client Logo Slider
         ---------------------------------------------------*/
@@ -396,9 +398,9 @@
                     }
                 ]
             });
-        } 
+        }
 
-        
+
         /*--------------------------------------------------
            11. Blog Slider
         ---------------------------------------------------*/
@@ -422,9 +424,9 @@
                 ]
             });
         }
-        
-        
-        
+
+
+
         /*--------------------------------------------------
            12. Team Slider
         ---------------------------------------------------*/
@@ -456,7 +458,7 @@
             });
         }
 
-        
+
         /*--------------------------------------------------
            13. Services Four
         ---------------------------------------------------*/
@@ -487,8 +489,8 @@
                 ]
             });
         }
-        
-        
+
+
         /*--------------------------------------------------
            14. Related Project
         ---------------------------------------------------*/
@@ -519,8 +521,8 @@
                 ]
             });
         }
-        
-        
+
+
         /*--------------------------------------------------
            15. Related News
         ---------------------------------------------------*/
@@ -544,8 +546,8 @@
                 ]
             });
         }
-        
-        
+
+
         /*--------------------------------------------------
            16. Fact Counter
         ---------------------------------------------------*/
@@ -583,49 +585,49 @@
         /*--------------------------------------------
            17. CountDown
         ---------------------------------------------*/
-		if($('.count-down').length !== 0){
+        if ($('.count-down').length !== 0) {
             var $date = $('.count-down').attr('data-date');
-                const second = 1000,
-				  minute = second * 60,
-				  hour = minute * 60,
-				  day = hour * 24;
-				let	countDown = new Date($date).getTime(),
-			x = setInterval(function() {
-			  let now = new Date().getTime(),
-				  distance = countDown - now;
-				document.getElementById('days').innerText = Math.floor(distance / (day)),
-				document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
-				document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
-				document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
-			  //do something later when date is reached
-			  //if (distance < 0) {
-			  //  clearInterval(x);
-			  //  'IT'S MY BIRTHDAY!;
-			  //}
-			}, second)
+            const second = 1000,
+                minute = second * 60,
+                hour = minute * 60,
+                day = hour * 24;
+            let countDown = new Date($date).getTime(),
+                x = setInterval(function () {
+                    let now = new Date().getTime(),
+                        distance = countDown - now;
+                    document.getElementById('days').innerText = Math.floor(distance / (day)),
+                        document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+                        document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+                        document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+                    //do something later when date is reached
+                    //if (distance < 0) {
+                    //  clearInterval(x);
+                    //  'IT'S MY BIRTHDAY!;
+                    //}
+                }, second)
         };
-        
+
 
         /*--------------------------------------------
            18. Search Popup
         ---------------------------------------------*/
-        var bodyOvrelay =  $('#body-overlay');
+        var bodyOvrelay = $('#body-overlay');
         var searchPopup = $('#td-search-popup');
         var sidebarMenu = $('#sidebar-menu');
 
-        $(document).on('click','#body-overlay',function(e){
+        $(document).on('click', '#body-overlay', function (e) {
             e.preventDefault();
             bodyOvrelay.removeClass('active');
             searchPopup.removeClass('active');
             sidebarMenu.removeClass('active');
         });
-        $(document).on('click','.search-bar-btn',function(e){
+        $(document).on('click', '.search-bar-btn', function (e) {
             e.preventDefault();
             searchPopup.addClass('active');
             bodyOvrelay.addClass('active');
         });
 
-        
+
         /* -------------------------------------------------
           19. Video PopUp
         ------------------------------------------------- */
@@ -634,23 +636,23 @@
                 type: 'video',
             });
         }
-        
+
         if ($('.about-video-play').length) {
             $('.about-video-play').magnificPopup({
                 type: 'video',
             });
         }
 
-        
+
         /* -------------------------------------------------
           20. Blog Active Item
         ------------------------------------------------- */
-        $(".blog-item").hover(function(){
+        $(".blog-item").hover(function () {
             $(".blog-item").removeClass("active");
             $(this).addClass("active");
         });
-        
-        
+
+
         /* -------------------------------------------------
            21. Skillbar
         ------------------------------------------------- */
@@ -664,7 +666,7 @@
             });
         }
 
-        
+
         /* -------------------------------------------------
            22. Project Filtering
         ------------------------------------------------- */
@@ -681,7 +683,7 @@
             });
 
         });
-        
+
         /* -------------------------------------------------
            23. Project Two Popup
         ------------------------------------------------- */
@@ -692,130 +694,130 @@
                 navigateByImgClick: true,
             },
         });
-        
-        
+
+
         /* -------------------------------------------------
           24. Circle Progress
         ------------------------------------------------- */
         /* About Page */
-       if ($.fn.circleProgress) {
-			var progress1 = $('.one.progress-content')
-			if($.fn.circleProgress) {
-			  progress1.appear(function () {
-				progress1.circleProgress({
-					value: 0.76,
-					size: 120,
-                    thickness: 7,
-                    emptyFill: "transparent",
-					fill: { gradient: ["#ff7e5f", "#feb47b"] },
-                    lineCap: 'square',
-                    startAngle: -Math.PI / 4 * 2,
-					animation : { duration: 2000},
-				  });
-			  });
-			};
-		};
-       if ($.fn.circleProgress) {
-			var progress2 = $('.two.progress-content')
-			if($.fn.circleProgress) {
-			  progress2.appear(function () {
-				progress2.circleProgress({
-					value: 0.65,
-					size: 120,
-                    thickness: 7,
-                    emptyFill: "transparent",
-					fill: { gradient: ["#ff7e5f", "#feb47b"] },
-                    lineCap: 'square',
-                    startAngle: -Math.PI / 4 * 2,
-					animation : { duration: 2000},
-				  });
-			  });
-			};
-		};
-        
-        
+        if ($.fn.circleProgress) {
+            var progress1 = $('.one.progress-content')
+            if ($.fn.circleProgress) {
+                progress1.appear(function () {
+                    progress1.circleProgress({
+                        value: 0.76,
+                        size: 120,
+                        thickness: 7,
+                        emptyFill: "transparent",
+                        fill: { gradient: ["#ff7e5f", "#feb47b"] },
+                        lineCap: 'square',
+                        startAngle: -Math.PI / 4 * 2,
+                        animation: { duration: 2000 },
+                    });
+                });
+            };
+        };
+        if ($.fn.circleProgress) {
+            var progress2 = $('.two.progress-content')
+            if ($.fn.circleProgress) {
+                progress2.appear(function () {
+                    progress2.circleProgress({
+                        value: 0.65,
+                        size: 120,
+                        thickness: 7,
+                        emptyFill: "transparent",
+                        fill: { gradient: ["#ff7e5f", "#feb47b"] },
+                        lineCap: 'square',
+                        startAngle: -Math.PI / 4 * 2,
+                        animation: { duration: 2000 },
+                    });
+                });
+            };
+        };
+
+
         /* Services Page */
-       if ($.fn.circleProgress) {
-			var progress11 = $('.one.circle-progress-inner')
-			if($.fn.circleProgress) {
-			  progress11.appear(function () {
-				progress11.circleProgress({
-					value: 0.76,
-					size: 100,
-                    thickness: 7,
-					fill: { gradient: ["#ff7e5f", "#feb47b"] },
-                    lineCap: 'square',
-                    startAngle: -Math.PI / 4 * 2,
-					animation : { duration: 2000},
-				  }).on('circle-animation-progress', function(event, progress) {
-					$(this).find('h3').html(Math.round(83 * progress) + '<span>%</span>');
-				  });
-			  });
-			};
-		};
-        
-       if ($.fn.circleProgress) {
-			var progress12 = $('.two.circle-progress-inner')
-			if($.fn.circleProgress) {
-			  progress12.appear(function () {
-				progress12.circleProgress({
-					value: 0.85,
-					size: 100,
-                    thickness: 7,
-					fill: { gradient: ["#ff7e5f", "#feb47b"] },
-                    lineCap: 'square',
-                    startAngle: -Math.PI / 4 * 2,
-					animation : { duration: 2000},
-				  }).on('circle-animation-progress', function(event, progress) {
-					$(this).find('h3').html(Math.round(94 * progress) + '<span>%</span>');
-				  });
-			  });
-			};
-		};
-        
-       if ($.fn.circleProgress) {
-			var progress13 = $('.three.circle-progress-inner')
-			if($.fn.circleProgress) {
-			  progress13.appear(function () {
-				progress13.circleProgress({
-					value: 0.8,
-					size: 100,
-                    thickness: 7,
-					fill: { gradient: ["#ff7e5f", "#feb47b"] },
-                    lineCap: 'square',
-                    startAngle: -Math.PI / 4 * 2,
-					animation : { duration: 2000},
-				  }).on('circle-animation-progress', function(event, progress) {
-					$(this).find('h3').html(Math.round(90 * progress) + '<span>%</span>');
-				  });
-			  });
-			};
-		};
-        
-        
+        if ($.fn.circleProgress) {
+            var progress11 = $('.one.circle-progress-inner')
+            if ($.fn.circleProgress) {
+                progress11.appear(function () {
+                    progress11.circleProgress({
+                        value: 0.76,
+                        size: 100,
+                        thickness: 7,
+                        fill: { gradient: ["#ff7e5f", "#feb47b"] },
+                        lineCap: 'square',
+                        startAngle: -Math.PI / 4 * 2,
+                        animation: { duration: 2000 },
+                    }).on('circle-animation-progress', function (event, progress) {
+                        $(this).find('h3').html(Math.round(83 * progress) + '<span>%</span>');
+                    });
+                });
+            };
+        };
+
+        if ($.fn.circleProgress) {
+            var progress12 = $('.two.circle-progress-inner')
+            if ($.fn.circleProgress) {
+                progress12.appear(function () {
+                    progress12.circleProgress({
+                        value: 0.85,
+                        size: 100,
+                        thickness: 7,
+                        fill: { gradient: ["#ff7e5f", "#feb47b"] },
+                        lineCap: 'square',
+                        startAngle: -Math.PI / 4 * 2,
+                        animation: { duration: 2000 },
+                    }).on('circle-animation-progress', function (event, progress) {
+                        $(this).find('h3').html(Math.round(94 * progress) + '<span>%</span>');
+                    });
+                });
+            };
+        };
+
+        if ($.fn.circleProgress) {
+            var progress13 = $('.three.circle-progress-inner')
+            if ($.fn.circleProgress) {
+                progress13.appear(function () {
+                    progress13.circleProgress({
+                        value: 0.8,
+                        size: 100,
+                        thickness: 7,
+                        fill: { gradient: ["#ff7e5f", "#feb47b"] },
+                        lineCap: 'square',
+                        startAngle: -Math.PI / 4 * 2,
+                        animation: { duration: 2000 },
+                    }).on('circle-animation-progress', function (event, progress) {
+                        $(this).find('h3').html(Math.round(90 * progress) + '<span>%</span>');
+                    });
+                });
+            };
+        };
+
+
         /* -------------------------------------------------
           25. Nice Select
         ------------------------------------------------- */
         $('select').niceSelect();
-        
-        
+
+
         /* -------------------------------------------------
           26. Price Range Slider
         ------------------------------------------------- */
         if ($('.price-slider-range').length) {
-            $( ".price-slider-range" ).slider({
-              range: "min",
-              value: 5960,
-              min: 5,
-              max: 8000,
-              slide: function( event, ui ) {
-                $( "#price" ).val( "$" + ui.value );
-              }
+            $(".price-slider-range").slider({
+                range: "min",
+                value: 5960,
+                min: 5,
+                max: 8000,
+                slide: function (event, ui) {
+                    $("#price").val("$" + ui.value);
+                }
             });
-            $( "#price" ).val( "$" + $( ".price-slider-range" ).slider( "value" ) );
+            $("#price").val("$" + $(".price-slider-range").slider("value"));
         }
-        
-        
+
+
         /* -------------------------------------------------
           27. WOW Animation
         ------------------------------------------------- */
@@ -842,7 +844,7 @@
 
     });
 
-    $(window).on("scroll", function() {
+    $(window).on("scroll", function () {
         /*---------------------------------------
            28. back to top
         -----------------------------------------*/
@@ -887,7 +889,7 @@
             e.preventDefault();
             $("#preloader").fadeOut(2000);
         });
-        
+
 
     });
 
