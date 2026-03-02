@@ -18,38 +18,27 @@
   min-height: 400px;
 }
 
-/* Banner three padding and responsive (reduced height) */
+/* Banner three padding and responsive (reduced height) - using aspect ratio for better fit */
 .hero-banner-three-wrapper.banner-three {
-  padding: 220px 0;
+  padding: 0;
+  min-height: 56.25vw;
+  /* 16:9 Aspect Ratio */
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 991px) {
   .hero-banner-three-wrapper.banner-three {
-    padding: 200px 0;
+    min-height: 56.25vw;
+    max-height: 60vh;
   }
 }
 
 @media (max-width: 768px) {
   .hero-banner-three-wrapper.banner-three {
-    padding: 180px 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-banner-three-wrapper.banner-three {
-    padding: 150px 0;
-  }
-}
-
-@media (max-width: 575px) {
-  .hero-banner-three-wrapper.banner-three {
-    padding: 140px 0;
-  }
-}
-
-@media (max-width: 400px) {
-  .hero-banner-three-wrapper.banner-three {
-    padding: 110px 0;
+    min-height: 70vh;
+    /* Taller on mobile for better visibility */
   }
 }
 
