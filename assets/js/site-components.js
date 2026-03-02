@@ -49,7 +49,7 @@
         '        <div class="collapse navbar-collapse" id="Iitechie_main_menu">\n' +
         '            <ul class="navbar-nav menu-open text-lg-end">\n' +
         '                <li><a href="index.html">Home</a></li>\n' +
-        '                <li><a href="about.html">about</a></li>\n' +
+        '                <li><a href="about.html">About</a></li>\n' +
         '                <li class="menu-item-has-children">\n' +
         '                    <a href="services.html">Services</a>\n' +
         '                    <ul class="sub-menu">\n' +
@@ -110,29 +110,8 @@
         '                        </li>\n' +
         '                    </ul>\n' +
         '                </li>\n' +
-        '                <li class="menu-item-has-children">\n' +
-        '                    <a href="#">Projects</a>\n' +
-        '                    <ul class="sub-menu">\n' +
-        '                        <li><a href="projects.html">Projects</a></li>\n' +
-        '                        <li><a href="project-details.html">Projects Details</a></li>\n' +
-        '                    </ul>\n' +
-        '                </li>\n' +
-        '                <li class="menu-item-has-children">\n' +
-        '                    <a href="#">Pages</a>\n' +
-        '                    <ul class="sub-menu">\n' +
-        '                        <li><a href="team.html">Team Members</a></li>\n' +
-        '                        <li class="menu-item-has-children">\n' +
-        '                            <a href="#">Blog</a>\n' +
-        '                            <ul class="sub-menu">\n' +
-        '                                <li><a href="blog.html">Blog</a></li>\n' +
-        '                                <li><a href="blog-details.html">Blog Details</a></li>\n' +
-        '                            </ul>\n' +
-        '                        </li>\n' +
-        '                        <li><a href="faqs.html">FAQs</a></li>\n' +
-        '                        <li><a href="contact.html">Contact Us</a></li>\n' +
-        '                        <li><a href="404.html">404 Error</a></li>\n' +
-        '                    </ul>\n' +
-        '                </li>\n' +
+        '                <li><a href="faqs.html">FAQs</a></li>\n' +
+        '                <li><a href="contact.html">Contact</a></li>\n' +
         '            </ul>\n' +
         '        </div>\n' +
         '        <div class="nav-right-part nav-right-part-desktop">\n' +
