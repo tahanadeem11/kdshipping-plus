@@ -79,3 +79,60 @@
 .hero-banner-three-wrapper .object-fit-cover {
   object-fit: cover;
 }
+
+/* Hero Overlay - light gradient for text readability */
+.hero-banner-three-wrapper .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%);
+  z-index: 0;
+}
+
+/* Hero Content Styles */
+.hero-banner-three-wrapper .hero-content-inner {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+}
+
+.hero-banner-three-wrapper .hero-subtitle {
+  color: #dd1d26;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  display: block;
+  font-size: 18px;
+}
+
+.hero-banner-three-wrapper .hero-title {
+  color: #fff;
+  font-size: 65px;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-banner-three-wrapper .hero-description {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+@media (max-width: 991px) {
+  .hero-banner-three-wrapper .hero-title {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-banner-three-wrapper .hero-title {
+    font-size: 35px;
+  }
+}
