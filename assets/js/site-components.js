@@ -153,11 +153,11 @@
         '                <div class="widget widget_nav_menu wow fadeInUp delay-0-4s">\n' +
         '                    <h4 class="widget-title">Our Services</h4>\n' +
         '                    <ul>\n' +
-        '                        <li><a href="services.html">Shipping &amp; Mailing</a></li>\n' +
-        '                        <li><a href="services.html">Mailbox Rental</a></li>\n' +
-        '                        <li><a href="services.html">Copying Services</a></li>\n' +
-        '                        <li><a href="services.html">Document Finishing</a></li>\n' +
-        '                        <li><a href="services.html">Notary Public</a></li>\n' +
+        '                        <li><a href="shipping-keller-tx.html">Shipping &amp; Mailing</a></li>\n' +
+        '                        <li><a href="mailbox-rental-keller-tx.html">Mailbox Rental</a></li>\n' +
+        '                        <li><a href="copying-services-keller-tx.html">Copying Services</a></li>\n' +
+        '                        <li><a href="document-finishing-services-keller-tx.html">Document Finishing</a></li>\n' +
+        '                        <li><a href="notary-public-keller-tx.html">Notary Public</a></li>\n' +
         '                        <li><a href="contact.html">Contact Us</a></li>\n' +
         '                        <li><a href="faqs.html">FAQs</a></li>\n' +
         '                    </ul>\n' +
