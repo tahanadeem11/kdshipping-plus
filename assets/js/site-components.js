@@ -31,10 +31,9 @@
         '                    <li><i class="fal fa-phone"></i> <b>Call :<a href="tel:8175764174"> (817) 576-4174</a></b></li>\n' +
         '                    <li><i class="fal fa-envelope"></i> <a href="mailto:staff@kdshippingplus.com">staff@kdshippingplus.com</a></li>\n' +
         '                    <li class="social-style-one">\n' +
-        '                        <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>\n' +
-        '                        <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>\n' +
-        '                        <a href="#"><i class="fab fa-dribbble" aria-hidden="true"></i></a>\n' +
-        '                        <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>\n' +
+        '                        <a href="https://www.facebook.com/KDShippingPlus" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>\n' +
+        '                        <a href="https://x.com/kd_shppingplus" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>\n' +
+        '                        <a href="https://www.instagram.com/kdshippingplus/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>\n' +
         '                    </li>\n' +
         '                </ul>\n' +
         '            </div>\n' +
@@ -61,10 +60,9 @@
         '            <div class="mobile-sidebar-header d-lg-none">\n' +
         '                <div class="sidebar-top-bar">\n' +
         '                    <div class="social-style-one">\n' +
-        '                        <a href="#"><i class="fab fa-facebook-f"></i></a>\n' +
-        '                        <a href="#"><i class="fab fa-twitter"></i></a>\n' +
-        '                        <a href="#"><i class="fab fa-dribbble"></i></a>\n' +
-        '                        <a href="#"><i class="fab fa-instagram"></i></a>\n' +
+        '                        <a href="https://www.facebook.com/KDShippingPlus" target="_blank"><i class="fab fa-facebook-f"></i></a>\n' +
+        '                        <a href="https://x.com/kd_shppingplus" target="_blank"><i class="fab fa-twitter"></i></a>\n' +
+        '                        <a href="https://www.instagram.com/kdshippingplus/" target="_blank"><i class="fab fa-instagram"></i></a>\n' +
         '                    </div>\n' +
         '                </div>\n' +
         '                <div class="sidebar-logo-row">\n' +
@@ -140,6 +138,7 @@
         '                        </li>\n' +
         '                    </ul>\n' +
         '                </li>\n' +
+        '                <li><a href="https://kdshippingpluscom-promotionalproducts.dcpromosite.com/" target="_blank" rel="noopener">Fulfillment & Promotional</a></li>\n' +
         '                <li><a href="faqs.html">FAQs</a></li>\n' +
         '                <li><a href="contact.html">Contact</a></li>\n' +
         '            </ul>\n' +
@@ -172,10 +171,9 @@
         '                    </div>\n' +
         '                    <p>KD Shipping Plus – Shipping, Mailing &amp; More in Keller, TX. Your one-stop for packaging, mailbox rental, printing, notary, and more.</p>\n' +
         '                    <div class="social-style-two mt-15">\n' +
-        '                        <a href="#"><i class="fab fa-facebook-f"></i></a>\n' +
-        '                        <a href="#"><i class="fab fa-twitter"></i></a>\n' +
-        '                        <a href="#"><i class="fab fa-dribbble"></i></a>\n' +
-        '                        <a href="#"><i class="fab fa-instagram"></i></a>\n' +
+        '                        <a href="https://www.facebook.com/KDShippingPlus" target="_blank"><i class="fab fa-facebook-f"></i></a>\n' +
+        '                        <a href="https://x.com/kd_shppingplus" target="_blank"><i class="fab fa-twitter"></i></a>\n' +
+        '                        <a href="https://www.instagram.com/kdshippingplus/" target="_blank"><i class="fab fa-instagram"></i></a>\n' +
         '                    </div>\n' +
         '                </div>\n' +
         '            </div>\n' +
@@ -188,6 +186,7 @@
         '                        <li><a href="copying-services-keller-tx.html">Copying Services</a></li>\n' +
         '                        <li><a href="document-finishing-services-keller-tx.html">Document Finishing</a></li>\n' +
         '                        <li><a href="notary-public-keller-tx.html">Notary Public</a></li>\n' +
+        '                        <li><a href="https://kdshippingpluscom-promotionalproducts.dcpromosite.com/" target="_blank" rel="noopener">Fulfillment & Promotional</a></li>\n' +
         '                        <li><a href="contact.html">Contact Us</a></li>\n' +
         '                        <li><a href="faqs.html">FAQs</a></li>\n' +
         '                    </ul>\n' +
@@ -213,8 +212,11 @@
         '                    </div>\n' +
         '                </div>\n' +
         '                <div class="col-lg-6">\n' +
-        '                    <div class="payment-method-image mb-15 text-center text-lg-end">\n' +
-        '                        <a href="#"><img src="assets/images/footer/payment-method.png" alt="Payment Method"></a>\n' +
+        '                    <div class="footer-bottom-menu mb-15 text-center text-lg-end">\n' +
+        '                        <ul class="d-inline-flex flex-wrap justify-content-center justify-content-lg-end mb-0 list-unstyled" style="gap: 20px;">\n' +
+        '                            <li><a href="terms-of-use.html">Terms of Use</a></li>\n' +
+        '                            <li><a href="privacy-policy.html">Privacy Policy</a></li>\n' +
+        '                        </ul>\n' +
         '                    </div>\n' +
         '                </div>\n' +
         '            </div>\n' +

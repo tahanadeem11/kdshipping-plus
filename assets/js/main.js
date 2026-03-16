@@ -93,19 +93,39 @@
                     var $parent = $(this).parent();
 
                     if ($submenu.is(':visible')) {
-                        $submenu.slideUp(300);
+                        $submenu.slideUp(350, "swing");
                         $(this).removeClass('open');
                         $parent.removeClass('menu-open');
                     } else {
-                        // Optional: close other open submenus
-                        // $parent.siblings().find('.sub-menu').slideUp(300);
-                        // $parent.siblings().find('.dropdown-btn').removeClass('open');
+                        // Optional: close other open submenus at the same level (accordion style)
+                        $parent.siblings().find('> .sub-menu').slideUp(300);
+                        $parent.siblings().find('> .dropdown-btn').removeClass('open');
+                        $parent.siblings().removeClass('menu-open');
 
-                        $submenu.slideDown(300);
+                        $submenu.slideDown(400, "swing", function() {
+                            // After opening, ensure it's visible in the sidebar
+                            var sidebar = $('.navbar-collapse');
+                            var offset = $parent.offset().top - sidebar.offset().top + sidebar.scrollTop();
+                            if (sidebar.height() + sidebar.scrollTop() < $parent.offset().top + $submenu.height()) {
+                                sidebar.animate({ scrollTop: offset - 20 }, 300);
+                            }
+                        });
                         $(this).addClass('open');
                         $parent.addClass('menu-open');
                     }
                 });
+
+                // Prevent parent links from navigating if they only serve as togglers 
+                // (though in this template they have separate buttons, sometimes people click the text)
+                // If you want the text to also toggle:
+                /*
+                $('.navbar-area .navbar-nav li.menu-item-has-children > a').off('click').on('click', function(e) {
+                    if($(window).width() < 992) {
+                        e.preventDefault();
+                        $(this).next('.dropdown-btn').trigger('click');
+                    }
+                });
+                */
             }
         }
 
