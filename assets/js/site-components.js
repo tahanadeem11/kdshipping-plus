@@ -5,6 +5,17 @@
 (function () {
     'use strict';
 
+    // Auto-load necessary CSS
+    const cssFiles = ['assets/css/mobile-sidebar.css'];
+    cssFiles.forEach(file => {
+        if (!document.querySelector(`link[href="${file}"]`)) {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = file;
+            document.head.appendChild(link);
+        }
+    });
+
     var headerHTML = '<!-- navbar start -->\n' +
         '<div class="navbar-top style-one text-white bgs-cover" style="background-image: url(assets/images/background/header-top-bg.jpg);">\n' +
         '    <div class="container container-1570">\n' +
@@ -47,14 +58,32 @@
         '            </a>\n' +
         '        </div>\n' +
         '        <div class="collapse navbar-collapse" id="Iitechie_main_menu">\n' +
+        '            <div class="mobile-sidebar-header d-lg-none">\n' +
+        '                <div class="sidebar-top-bar">\n' +
+        '                    <div class="social-style-one">\n' +
+        '                        <a href="#"><i class="fab fa-facebook-f"></i></a>\n' +
+        '                        <a href="#"><i class="fab fa-twitter"></i></a>\n' +
+        '                        <a href="#"><i class="fab fa-dribbble"></i></a>\n' +
+        '                        <a href="#"><i class="fab fa-instagram"></i></a>\n' +
+        '                    </div>\n' +
+        '                </div>\n' +
+        '                <div class="sidebar-logo-row">\n' +
+        '                    <div class="logo">\n' +
+        '                        <a href="index.html"><img src="assets/images/logos/logo.png" alt="Logo"></a>\n' +
+        '                    </div>\n' +
+        '                    <div class="right-icons">\n' +
+        '                        <button class="search-bar-btn"><i class="far fa-search"></i></button>\n' +
+        '                    </div>\n' +
+        '                </div>\n' +
+        '            </div>\n' +
         '            <ul class="navbar-nav menu-open text-lg-end">\n' +
         '                <li><a href="index.html">Home</a></li>\n' +
         '                <li><a href="about.html">About</a></li>\n' +
         '                <li class="menu-item-has-children">\n' +
-        '                    <a href="services.html">Services</a>\n' +
+        '                    <a href="services.html">Services</a><span class="dropdown-btn"><i class="fal fa-chevron-down"></i></span>\n' +
         '                    <ul class="sub-menu">\n' +
         '                        <li class="menu-item-has-children">\n' +
-        '                            <a href="#">Copy & Print</a>\n' +
+        '                            <a href="#">Copy & Print</a><span class="dropdown-btn"><i class="fal fa-chevron-down"></i></span>\n' +
         '                            <ul class="sub-menu">\n' +
         '                                <li><a href="business-card-solution-keller-tx.html">Business Cards</a></li>\n' +
         '                                <li><a href="copying-services-keller-tx.html">Copying Services</a></li>\n' +
@@ -69,7 +98,7 @@
         '                            </ul>\n' +
         '                        </li>\n' +
         '                        <li class="menu-item-has-children">\n' +
-        '                            <a href="#">Home & Business</a>\n' +
+        '                            <a href="#">Home & Business</a><span class="dropdown-btn"><i class="fal fa-chevron-down"></i></span>\n' +
         '                            <ul class="sub-menu">\n' +
         '                                <li><a href="computer-rental-keller-tx.html">Computer Rental</a></li>\n' +
         '                                <li><a href="digital-fingerprinting-keller-tx.html">Digital Fingerprinting</a></li>\n' +
@@ -89,7 +118,7 @@
         '                            </ul>\n' +
         '                        </li>\n' +
         '                        <li class="menu-item-has-children">\n' +
-        '                            <a href="#">Pack & Ship</a>\n' +
+        '                            <a href="#">Pack & Ship</a><span class="dropdown-btn"><i class="fal fa-chevron-down"></i></span>\n' +
         '                            <ul class="sub-menu">\n' +
         '                                <li><a href="packing-keller-tx.html">Packing</a></li>\n' +
         '                                <li><a href="custom-box-making-keller-tx.html">Custom Box Making</a></li>\n' +
@@ -102,10 +131,11 @@
         '                            </ul>\n' +
         '                        </li>\n' +
         '                        <li class="menu-item-has-children">\n' +
-        '                            <a href="#">Digital Mailbox Rental</a>\n' +
+        '                            <a href="#">Digital Mailbox Rental</a><span class="dropdown-btn"><i class="fal fa-chevron-down"></i></span>\n' +
         '                            <ul class="sub-menu">\n' +
         '                                <li><a href="anytime-mailbox-keller-tx.html">Anytime Mailbox</a></li>\n' +
         '                                <li><a href="ipostal1-keller-tx.html">iPostal1</a></li>\n' +
+        '                                <li><a href="postscan-keller-tx.html">PostScan Mail</a></li>\n' +
         '                            </ul>\n' +
         '                        </li>\n' +
         '                    </ul>\n' +
