@@ -22,8 +22,7 @@
         '        <div class="row">\n' +
         '            <div class="col-lg-6">\n' +
         '                <div class="topbar-left text-lg-start text-center">\n' +
-        '                    <span class="off">20% OFF</span>\n' +
-        '                    <span>Free Shipping on all U.S. Orders $50+</span>\n' +
+        '                    <span>Expert Shipping, Professional Printing & Secure Business Solutions</span>\n' +
         '                </div>\n' +
         '            </div>\n' +
         '            <div class="col-lg-6">\n' +

@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>KD Shipping Plus - Shipping, Mailboxes & More | Contact</title>
+    <title>Reach Out To Us | Contact KD Shipping Plus in Keller, TX</title>
+    <meta name="description" content="Contact KD Shipping Plus in Keller, TX for all your shipping, printing, and business service needs. Visit us at 2041 Rufe Snow Dr or call (817) 576-4174.">
+    <link rel="canonical" href="https://kdshippingplus.net/contact">
     <link rel=icon href="assets/images/favicon.png" sizes="20x20" type="image/png">
 
     <!-- Stylesheet -->
@@ -19,6 +21,35 @@
     <link rel="stylesheet" href="assets/css/flaticon.min.css">
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .contact-info-content, .contact-info-wrap {
+            align-items: flex-start !important;
+            justify-content: flex-start !important;
+            padding: 50px !important;
+            height: auto !important;
+        }
+        .contact-info-item {
+            padding: 30px !important;
+            width: 100%;
+            text-align: left !important;
+        }
+        .contact-info-item .content {
+            text-align: left !important;
+        }
+        @media (max-width: 991px) {
+            .contact-info-area .no-gap {
+                margin: 0 -15px !important;
+            }
+            .contact-info-area .no-gap > div {
+                padding: 0 15px !important;
+                margin-bottom: 30px;
+            }
+            .contact-info-content, .contact-info-wrap {
+                border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -101,17 +132,110 @@
         <section class="contact-info-area mb-130">
             <div class="container">
                 <div class="row no-gap">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-12">
                         <div class="contact-info-content wow fadeInLeft delay-0-2s">
                             <div class="section-title mb-25">
-                                <span class="sub-title mb-15">Contact Us</span>
-                                <h2>We're Ready to Help! Feel Free to Contact Us</h2>
+                                <span class="sub-title mb-15" style="font-size: 14px;">Contact Us</span>
+                                <h2 style="font-size: 28px; line-height: 1.2;">We're Ready to Help! Feel Free to Contact Us</h2>
                             </div>
-                            <p>Whether you're shipping a fragile gift or need a document notarized, we're here for you.
-                            </p>
+                            <p style="font-size: 15px; margin-bottom: 25px;">Whether you're shipping a fragile gift or need a document notarized, we're here for you.</p>
+                            
+                            <form id="contactForm" class="contact-form z-1 rel" action="assets/php/form-process.php"
+                                name="contactForm" method="post">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" id="name" name="name" class="form-control" 
+                                                placeholder="Full Name" required data-error="Please enter your name" style="padding: 10px 15px; height: 45px;">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="email" id="email" name="email" class="form-control" 
+                                                placeholder="Email Address" required data-error="Please enter your email" style="padding: 10px 15px; height: 45px;">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" id="phone_number" name="phone_number" class="form-control" 
+                                                placeholder="Phone Number" required data-error="Please enter your phone number" style="padding: 10px 15px; height: 45px;">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 mb-20">
+                                        <div class="form-group">
+                                            <select id="msg_subject" name="msg_subject" required style="padding: 10px 15px; height: 45px;">
+                                                <option value="" selected disabled>Select Service</option>
+                                                <option value="Business Cards">Business Cards (Special Offer!)</option>
+                                                <option value="Copy & Print">Copy & Print</option>
+                                                <option value="Home & Business">Home & Business</option>
+                                                <option value="Pack & Ship">Pack & Ship</option>
+                                                <option value="Digital Mailbox Rental">Digital Mailbox Rental</option>
+                                                <option value="Product Shipping & Mailing">Product Shipping & Mailing</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Special Business Card Fields (Initially Hidden) -->
+                                    <div id="businessCardFields" style="display: none; width: 100%;">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <select id="card_quantity" name="card_quantity" style="padding: 10px 15px; height: 45px;">
+                                                        <option value="" selected disabled>Quantity</option>
+                                                        <option value="100">100 Cards</option>
+                                                        <option value="250">250 Cards</option>
+                                                        <option value="500">500 Cards</option>
+                                                        <option value="1000">1000 Cards</option>
+                                                        <option value="More">More Than 1000</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <select id="card_type" name="card_type" style="padding: 10px 15px; height: 45px;">
+                                                        <option value="" selected disabled>Card Type</option>
+                                                        <option value="Standard">Standard Matte</option>
+                                                        <option value="Premium">Premium Glossy</option>
+                                                        <option value="Linen">Linen Texture</option>
+                                                        <option value="Silk">Silk / Soft Touch</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 mb-20">
+                                                <div class="form-group">
+                                                    <select id="card_design" name="card_design" style="padding: 10px 15px; height: 45px;">
+                                                        <option value="" selected disabled>Design</option>
+                                                        <option value="I have a design">I have my own design</option>
+                                                        <option value="Need a design">I need a new design</option>
+                                                        <option value="Update existing">Update existing design</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <textarea name="message" id="message" class="form-control" rows="3"
+                                                placeholder="Write your Message" required
+                                                data-error="Please enter your Message" style="padding: 10px 15px;"></textarea>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group mb-0">
+                                            <button type="submit" class="theme-btn" style="padding: 10px 25px;">Send Message <i
+                                                    class="fas fa-arrow-right"></i></button>
+                                            <div id="msgSubmit" class="hidden"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-12">
                         <div class="contact-info-wrap wow fadeInRight delay-0-2s">
                             <div class="contact-info-item">
                                 <div class="icon"><i class="fal fa-map-marker-alt"></i></div>
@@ -137,10 +261,17 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
         <!-- Contact Info Area end -->
 
+
+
+
+
+
+        <!-- Contact Form End -->
 
         <!-- Location Map Area Start -->
         <div class="contact-page-map wow fadeInUp delay-0-2s">
@@ -151,83 +282,6 @@
             </div>
         </div>
         <!-- Location Map Area End -->
-
-
-        <!-- Contact Form Start -->
-        <section class="contact-form-area mt-110 mb-130 wow fadeInUp delay-0-2s">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <form id="contactForm" class="contact-form z-1 rel" action="assets/php/form-process.php"
-                            name="contactForm" method="post">
-                            <div class="section-title text-center mb-40">
-                                <span class="sub-title">Get In Touch</span>
-                                <h2>Send Us Message</h2>
-                            </div>
-                            <div class="row mt-25">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="name"><i class="far fa-user"></i></label>
-                                        <input type="text" id="name" name="name" class="form-control" value=""
-                                            placeholder="Full Name" required data-error="Please enter your name">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="email"><i class="far fa-envelope"></i></label>
-                                        <input type="email" id="email" name="email" class="form-control" value=""
-                                            placeholder="Email Address" required data-error="Please enter your name">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="phone"><i class="far fa-phone"></i></label>
-                                        <input type="text" id="phone" name="phone" class="form-control" value=""
-                                            placeholder="Phone Number">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 mb-30">
-                                    <div class="form-group">
-                                        <label for="subject"><i class="far fa-question-circle"></i></label>
-                                        <select id="subject">
-                                            <option value="default" selected="">Subject :</option>
-                                            <option value="product">Product</option>
-                                            <option value="printing">Printing</option>
-                                            <option value="design">Design</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label for="message"><i class="far fa-highlighter"></i></label>
-                                        <textarea name="message" id="message" class="form-control" rows="4"
-                                            placeholder="Write your Message" required
-                                            data-error="Please enter your Message"></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="tac-wrap mb-30">
-                                        <input type="checkbox" id="tac" name="tac" value="tac">
-                                        <label for="tac">I agree that my data is collected and stored.</label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group mb-0">
-                                        <button type="submit" class="theme-btn">Send Message <i
-                                                class="fas fa-arrow-right"></i></button>
-                                        <div id="msgSubmit" class="hidden"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Contact Form End -->
 
 
         <!-- CTA Area start -->
@@ -250,7 +304,7 @@
                 <div class="col-xl-4 align-self-center">
                     <div class="cta-content text-white py-55 wow fadeInUp delay-0-2s">
                         <div class="section-title mb-35">
-                            <span class="sub-title mb-10">Contact With Us</span>
+                            <span class="sub-title mb-10">Reach Out To Us</span>
                             <h2>Need Any Printing For your Business?</h2>
                         </div>
                         <a href="contact.html" class="theme-btn">Contact Us <i class="far fa-long-arrow-right"></i></a>
@@ -302,6 +356,24 @@
 
     <!-- main js  -->
     <script src="assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Check if we should pre-select Business Cards based on URL
+            if (window.location.hash === '#business-cards') {
+                $('#msg_subject').val('Business Cards').niceSelect('update');
+                $('#businessCardFields').show();
+            }
+
+            $('#msg_subject').change(function() {
+                if ($(this).val() === 'Business Cards') {
+                    $('#businessCardFields').fadeIn();
+                } else {
+                    $('#businessCardFields').fadeOut();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
