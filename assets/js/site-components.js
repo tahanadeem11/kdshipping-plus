@@ -20,12 +20,12 @@
         '<div class="navbar-top style-one text-white bgs-cover" style="background-image: url(assets/images/background/header-top-bg.jpg);">\n' +
         '    <div class="container container-1570">\n' +
         '        <div class="row">\n' +
-        '            <div class="col-lg-6">\n' +
+        '            <div class="col-lg-5">\n' +
         '                <div class="topbar-left text-lg-start text-center">\n' +
         '                    <span>Expert Shipping, Professional Printing & Secure Business Solutions</span>\n' +
         '                </div>\n' +
         '            </div>\n' +
-        '            <div class="col-lg-6">\n' +
+        '            <div class="col-lg-7">\n' +
         '                <ul class="topbar-right justify-content-center justify-content-lg-end">\n' +
         '                    <li><i class="fal fa-phone"></i> <b>Call :<a href="tel:8175764174"> (817) 576-4174</a></b></li>\n' +
         '                    <li><i class="fal fa-envelope"></i> <a href="mailto:staff@kdshippingplus.com">staff@kdshippingplus.com</a></li>\n' +
@@ -147,13 +147,6 @@
         '                <i class="far fa-search"></i>\n' +
         '            </button>\n' +
         '            <a href="contact.html" class="theme-btn style-two">Get Started <i class="far fa-long-arrow-right"></i></a>\n' +
-        '            <div class="menu-sidebar">\n' +
-        '                <button>\n' +
-        '                    <i class="far fa-ellipsis-h"></i>\n' +
-        '                    <i class="far fa-ellipsis-h"></i>\n' +
-        '                    <i class="far fa-ellipsis-h"></i>\n' +
-        '                </button>\n' +
-        '            </div>\n' +
         '        </div>\n' +
         '    </div>\n' +
         '</nav>\n' +
@@ -207,7 +200,7 @@
         '            <div class="row align-items-center">\n' +
         '                <div class="col-lg-6">\n' +
         '                    <div class="copyright-text text-center text-lg-start">\n' +
-        '                        <p>&copy; Copyright 2025, All Rights Reserved Powered by <a href="http://nextlevelrankers.com/" target="_blank" rel="noopener">Next Level Rankers</a></p>\n' +
+        '                        <p>&copy; Copyright 2026, All Rights Reserved Powered by <a href="http://nextlevelrankers.com/" target="_blank" rel="noopener">Next Level Rankers</a></p>\n' +
         '                    </div>\n' +
         '                </div>\n' +
         '                <div class="col-lg-6">\n' +

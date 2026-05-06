@@ -695,13 +695,37 @@
         ------------------------------------------------- */
         if ($('.video-play').length) {
             $('.video-play').magnificPopup({
-                type: 'video',
+                type: 'iframe',
+                mainClass: 'mfp-fade',
+                removalDelay: 160,
+                preloader: false,
+                fixedContentPos: false,
+                callbacks: {
+                    elementParse: function(item) {
+                        if(item.src.toLowerCase().endsWith('.webm') || item.src.toLowerCase().endsWith('.mp4')) {
+                            item.type = 'inline';
+                            item.src = '<div class="mfp-video-container"><video autoplay controls width="100%" height="auto"><source src="' + item.src + '" type="video/' + (item.src.toLowerCase().endsWith('.webm') ? 'webm' : 'mp4') + '"></video></div>';
+                        }
+                    }
+                }
             });
         }
 
         if ($('.about-video-play').length) {
             $('.about-video-play').magnificPopup({
-                type: 'video',
+                type: 'iframe',
+                mainClass: 'mfp-fade',
+                removalDelay: 160,
+                preloader: false,
+                fixedContentPos: false,
+                callbacks: {
+                    elementParse: function(item) {
+                        if(item.src.toLowerCase().endsWith('.webm') || item.src.toLowerCase().endsWith('.mp4')) {
+                            item.type = 'inline';
+                            item.src = '<div class="mfp-video-container"><video autoplay controls width="100%" height="auto"><source src="' + item.src + '" type="video/' + (item.src.toLowerCase().endsWith('.webm') ? 'webm' : 'mp4') + '"></video></div>';
+                        }
+                    }
+                }
             });
         }
 
@@ -812,7 +836,7 @@
                         startAngle: -Math.PI / 4 * 2,
                         animation: { duration: 2000 },
                     }).on('circle-animation-progress', function (event, progress) {
-                        $(this).find('h3').html(Math.round(83 * progress) + '<span>%</span>');
+                        $(this).find('h3').html(Math.round(98 * progress) + '<span>%</span>');
                     });
                 });
             };
@@ -831,7 +855,7 @@
                         startAngle: -Math.PI / 4 * 2,
                         animation: { duration: 2000 },
                     }).on('circle-animation-progress', function (event, progress) {
-                        $(this).find('h3').html(Math.round(94 * progress) + '<span>%</span>');
+                        $(this).find('h3').html(Math.round(100 * progress) + '<span>%</span>');
                     });
                 });
             };
@@ -850,7 +874,7 @@
                         startAngle: -Math.PI / 4 * 2,
                         animation: { duration: 2000 },
                     }).on('circle-animation-progress', function (event, progress) {
-                        $(this).find('h3').html(Math.round(90 * progress) + '<span>%</span>');
+                        $(this).find('h3').html(Math.round(95 * progress) + '<span>%</span>');
                     });
                 });
             };
